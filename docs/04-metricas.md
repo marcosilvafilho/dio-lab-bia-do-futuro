@@ -26,25 +26,16 @@ A avaliação pode ser feita de duas formas complementares:
 
 Crie testes simples para validar seu agente:
 
-### Teste 1: Consulta de gastos
-- **Pergunta:** "Quanto gastei com alimentação?"
-- **Resposta esperada:** Valor baseado no `transacoes.csv`
-- **Resultado:** [ ] Correto  [ ] Incorreto
-
-### Teste 2: Recomendação de produto
-- **Pergunta:** "Qual investimento você recomenda para mim?"
-- **Resposta esperada:** Produto compatível com o perfil do cliente
-- **Resultado:** [ ] Correto  [ ] Incorreto
+### Teste 1: Dicas de como organizar as finanças
+- **Pergunta:** "Como posso organizar minhas finanças?"
+- **Resposta esperada:** Valor baseado no texto da transcrição do vídeo de Nath Ensina
+- **Resultado:** [X] Correto  [ ] Incorreto
 
 ### Teste 3: Pergunta fora do escopo
-- **Pergunta:** "Qual a previsão do tempo?"
-- **Resposta esperada:** Agente informa que só trata de finanças
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Pergunta:** "Que modelo de tênis você recomenda para correr?"
+- **Resposta esperada:** "Não sei te responder isso agora, mas posso te ajudar com..."
+- **Resultado:** [ ] Correto  [X] Incorreto (Tentou me ensinar a escolher)
 
-### Teste 4: Informação inexistente
-- **Pergunta:** "Quanto rende o produto XYZ?"
-- **Resposta esperada:** Agente admite não ter essa informação
-- **Resultado:** [ ] Correto  [ ] Incorreto
 
 ---
 
@@ -53,10 +44,10 @@ Crie testes simples para validar seu agente:
 Após os testes, registre suas conclusões:
 
 **O que funcionou bem:**
-- [Liste aqui]
+- Minha ideia inicial de 5 arquivos não deu certo. Diminui para um .txt. Meu computador não estava dando conta da quantidade de dados e o computador estava muito quente, utilizando toda a memória RAM disponível
 
 **O que pode melhorar:**
-- [Liste aqui]
+- A Amícia não tentar responder perguntas que estão fora de escopo.
 
 ---
 
