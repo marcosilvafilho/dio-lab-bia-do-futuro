@@ -31,7 +31,7 @@ Crie testes simples para validar seu agente:
 - **Resposta esperada:** Valor baseado no texto da transcrição do vídeo de Nath Ensina
 - **Resultado:** [X] Correto  [ ] Incorreto
 
-### Teste 3: Pergunta fora do escopo
+### Teste 2: Pergunta fora do escopo
 - **Pergunta:** "Que modelo de tênis você recomenda para correr?"
 - **Resposta esperada:** "Não sei te responder isso agora, mas posso te ajudar com..."
 - **Resultado:** [ ] Correto  [X] Incorreto (Tentou me ensinar a escolher)
@@ -44,10 +44,11 @@ Crie testes simples para validar seu agente:
 Após os testes, registre suas conclusões:
 
 **O que funcionou bem:**
-- Minha ideia inicial de 5 arquivos não deu certo. Diminui para um .txt. Meu computador não estava dando conta da quantidade de dados e o computador estava muito quente, utilizando toda a memória RAM disponível
+- Minha ideia inicial de 5 arquivos não deu certo. Diminui para um .txt. Meu computador não estava dando conta da quantidade de dados e o computador estava muito quente, utilizando toda a memória RAM disponível.
 
 **O que pode melhorar:**
 - A Amícia não tentar responder perguntas que estão fora de escopo.
+- Minha ideia inicial de 5 fontes exigiria uma IA muito pesada para rodar localmente, tornando impossível para computadores comuns comportar sua ação. Por isso precisei reduzir para uma fonte apenas, de tamanho menor. Sacrifiquei a base de dados pela acessibilidade. Um modelo online, com a compra de tokens seria o ideal para um conhecimento mais robusto. Porém já não seria gratuito.
 
 ---
 
