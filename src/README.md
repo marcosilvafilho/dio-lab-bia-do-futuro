@@ -24,3 +24,6 @@ Todo o código-fonte está no arquivo app.py
 # Rodar a aplicação
 python -m streamlit run src/app.py
 ```
+## Evidência de Execução
+
+<img width="1121" height="592" alt="image" src="https://github.com/user-attachments/assets/5c0efcf1-437d-4eba-8de7-5db20c1e9390" />
