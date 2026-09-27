@@ -23,6 +23,7 @@ Trazendo orientações financeiras de organização do salário, mesmo que seja 
 > Por que essa solução é inovadora e qual é o impacto dela na sociedade?
 
 Uma orientação e auxílio gratuito, direcionado para sua necessidade pode ajudar muito quem não pode buscar um profissional especializado.
+
 ---
 
 ## Checklist do Pitch
