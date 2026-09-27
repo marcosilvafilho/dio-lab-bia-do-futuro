@@ -17,7 +17,7 @@ Trazendo orientações financeiras de organização do salário, mesmo que seja 
 ### 3. Demonstração (1 min)
 > Mostre o agente funcionando (pode ser gravação de tela)
 
-[Descreva o que será mostrado]
+Exemplos de duas perguntas sendo respondidas
 
 ### 4. Diferencial e Impacto (30 seg)
 > Por que essa solução é inovadora e qual é o impacto dela na sociedade?
@@ -28,16 +28,14 @@ Uma orientação e auxílio gratuito, direcionado para sua necessidade pode ajud
 
 ## Checklist do Pitch
 
-- [ ] Duração máxima de 3 minutos
-- [ ] Problema claramente definido
-- [ ] Solução demonstrada na prática
-- [ ] Diferencial explicado
-- [ ] Áudio e vídeo com boa qualidade
+- [x] Duração máxima de 3 minutos
+- [x] Problema claramente definido
+- [x] Solução demonstrada na prática
+- [x] Diferencial explicado
+- [x] Áudio e vídeo com boa qualidade
 
 ---
 
 ## Link do Vídeo
 
-> Cole aqui o link do seu pitch (YouTube, Loom, Google Drive, etc.)
-
-[Link do vídeo]
+[AmícIA, sua Amiga Inteligente | Uma Especialista em Finanças](https://www.youtube.com/watch?v=YTjavvynpEY)
