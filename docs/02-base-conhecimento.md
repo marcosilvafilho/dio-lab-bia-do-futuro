@@ -2,25 +2,22 @@
 
 ## Dados Utilizados
 
-Descreva se usou os arquivos da pasta `data`, por exemplo:
+Utilizei os seguintes arquivos da pasta `data`:
 
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
-| `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
-
-> [!TIP]
-> **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
+| `Caderno de Educação Financeira - Banco Central do Brasil.pdf` | PDF | Trazer Educação Financeira no contexto brasileiro |
+| `TOP Planejamento financeiro pessoal - Comissão de Valores Mobiliários.pdf` | PDF | Ajudar no Planejamento Financeiro pessoal no contexto brasileiro |
+| `Transcrição do vídeo Como começar a investir.txt` | TXT | Trazer ideias de investimentos para iniciantes |
+| `Transcrição do vídeo Como planejar a vida financeira.txt` | TXT | Ajudar no Planejamento Financeiro |
+| `Transcrição do vídeo Nath Ensina.txt` | TXT | Ajudar a otimizar o uso de um orçamento curto |
 
 ---
 
 ## Adaptações nos Dados
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
-
-[Sua descrição aqui]
+Sim, meu objetivo era diferente do que os dados da pasta original forneciam, então trouxe as fontes listadas acima.
 
 ---
 
@@ -29,12 +26,11 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
 
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
+Os PDFs e arquivos de texto são carregados no início da sessão e incluídos no contexto do prompt
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
-
-[Sua descrição aqui]
+Vão no system prompt, a partir da leitura dos arquivos no início, pois não é uma base muito grande.
 
 ---
 
