@@ -8,12 +8,11 @@
 ### 1. O Problema (30 seg)
 > Qual dor do cliente você resolve?
 
-[Sua descrição aqui]
+Dificuldade em organizar as finanças
 
 ### 2. A Solução (1 min)
 > Como seu agente resolve esse problema?
-
-[Sua descrição aqui]
+Trazendo orientações financeiras de organização do salário, mesmo que seja pouco.
 
 ### 3. Demonstração (1 min)
 > Mostre o agente funcionando (pode ser gravação de tela)
@@ -23,8 +22,7 @@
 ### 4. Diferencial e Impacto (30 seg)
 > Por que essa solução é inovadora e qual é o impacto dela na sociedade?
 
-[Sua descrição aqui]
-
+Uma orientação e auxílio gratuito, direcionado para sua necessidade pode ajudar muito quem não pode buscar um profissional especializado.
 ---
 
 ## Checklist do Pitch
