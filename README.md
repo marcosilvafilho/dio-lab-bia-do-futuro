@@ -1,149 +1,144 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# 🙋‍♀️ AmícIA - Sua IA Amiga para Planejamento Financeiro
 
-## Contexto
-
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
-
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
-
-> [!TIP]
-> Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
+A **AmícIA** é uma agente virtual especializada em planejamento financeiro individual e familiar. O projeto foi criado para oferecer orientação e auxílio gratuito, direcionado para as necessidades de quem não pode buscar um profissional especializado.
 
 ---
 
-## O Que Você Deve Entregar
+## 🎯 O Problema e a Solução
 
-### 1. Documentação do Agente
+* **O Problema:** É comum que as pessoas tenham sonhos e metas, mas não consigam traduzi-los em objetivos claros e alcançáveis porque não sabem lidar bem com suas finanças ou têm dificuldade em organizá-las.
 
-Defina **o que** seu agente faz e **como** ele funciona:
 
-- **Caso de Uso:** Qual problema financeiro ele resolve? (ex: consultoria de investimentos, planejamento de metas, alertas de gastos)
-- **Persona e Tom de Voz:** Como o agente se comporta e se comunica?
-- **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
-- **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
+* **A Solução:** A AmícIA resolve esse problema de forma proativa, trazendo orientações financeiras para a organização do salário, mesmo que seja pouco. O agente explica, dá dicas e exemplos de como organizar a vida financeira para atingir objetivos pessoais.
 
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
 
----
+* **Público-Alvo:** Pessoas e famílias que desejam organizar melhor sua vida financeira, principalmente jovens que estão iniciando sua vida profissional.
 
-### 2. Base de Conhecimento
 
-Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
-
-| Arquivo | Formato | Descrição |
-|---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
-
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
-
-📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
 
 ---
 
-### 3. Prompts do Agente
+## 🎭 Persona e Tom de Voz
 
-Documente os prompts que definem o comportamento do seu agente:
+A AmícIA foi construída com diretrizes de comportamento muito claras:
 
-- **System Prompt:** Instruções gerais de comportamento e restrições
-- **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
-- **Tratamento de Edge Cases:** Como o agente lida com situações limite
+* **Personalidade:** Ela atua de forma amigável, com explicações didáticas e propondo sempre aplicações práticas para o dia a dia.
 
-📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
 
----
+* **Abordagem:** Conversa como uma amiga especialista em finanças.
 
-### 4. Aplicação Funcional
 
-Desenvolva um **protótipo funcional** do seu agente:
+* **Saudação Padrão:** "Olá! Sou AmícIA, sua amiga inteligente. Quero te ajudar a alcançar as suas metas!".
 
-- Chatbot interativo (sugestão: Streamlit, Gradio ou similar)
-- Integração com LLM (via API ou modelo local)
-- Conexão com a base de conhecimento
 
-📁 **Pasta:** [`src/`](./src/)
+* **Introdução de Soluções:** "Vou te explicar e te dar exemplos e propostas pra você colocar em prática...".
+
+
 
 ---
 
-### 5. Avaliação e Métricas
+## ⚙️ Arquitetura e Tecnologias
 
-Descreva como você avalia a qualidade do seu agente:
+O projeto foi desenvolvido para ser executado localmente, focado em privacidade e leveza.
 
-**Métricas Sugeridas:**
-- Precisão/assertividade das respostas
-- Taxa de respostas seguras (sem alucinações)
-- Coerência com o perfil do cliente
+* **Interface:** Streamlit.
 
-📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
 
----
+* **LLM:** Ollama rodando localmente. Foi escolhido o modelo `llama3.2:1b`, que é um modelo ultraleve focado em computadores com pouca RAM.
 
-### 6. Pitch
 
-Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
+* **Base de Conhecimento:** Arquivo TXT (`Transcrição do vídeo Nath Ensina.txt`) injetado diretamente no contexto do prompt.
 
-- Qual problema seu agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é inovadora?
 
-📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
+* **Estratégia de Integração:** Os dados da base de conhecimento são carregados no início da sessão do aplicativo e inseridos no *System Prompt* (junto às diretrizes) antes do envio da mensagem para a IA. O modelo no Ollama também foi configurado com `num_ctx: 4096` (bloqueio de memória) para manter o computador rápido.
+
+
 
 ---
 
-## Ferramentas Sugeridas
+## 📚 Base de Dados: Desafios e Decisões
 
-Todas as ferramentas abaixo possuem versões gratuitas:
+A ideia original para a Base de Conhecimento contemplava 5 arquivos diferentes, incluindo materiais do Banco Central, da Comissão de Valores Mobiliários (CVM) e transcrições de diversos vídeos de educação financeira.
 
-| Categoria | Ferramentas |
-|-----------|-------------|
-| **LLMs** | [ChatGPT](https://chat.openai.com/), [Copilot](https://copilot.microsoft.com/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/), [Ollama](https://ollama.ai/) |
-| **Desenvolvimento** | [Streamlit](https://streamlit.io/), [Gradio](https://www.gradio.app/), [Google Colab](https://colab.research.google.com/) |
-| **Orquestração** | [LangChain](https://www.langchain.com/), [LangFlow](https://www.langflow.org/), [CrewAI](https://www.crewai.com/) |
-| **Diagramas** | [Mermaid](https://mermaid.js.org/), [Draw.io](https://app.diagrams.net/), [Excalidraw](https://excalidraw.com/) |
+**Ajuste de Rota:**
+
+* A tentativa de usar 5 arquivos não funcionou bem na prática local.
+
+
+* O computador não estava dando conta da quantidade de dados, sofrendo com superaquecimento e utilizando toda a memória RAM disponível.
+
+
+* Como solução, a base foi reduzida para apenas 1 arquivo TXT ("Transcrição do vídeo Nath Ensina") para não sobrecarregar o sistema.
+
+
+* Houve o sacrifício de uma base de dados maior em prol da acessibilidade e viabilidade de rodar localmente e de forma gratuita em computadores comuns.
+
+
 
 ---
 
-## Estrutura do Repositório
+## 🛡️ Segurança e Anti-Alucinação
+
+Para garantir que a AmícIA seja uma conselheira responsável, foram implementadas regras estritas no *System Prompt* com a técnica de *Few-Shot Prompting* (fornecendo exemplos de interação).
+
+**O que o agente NÃO faz:**
+
+* O agente só responde com base nos dados fornecidos.
+
+
+* Nunca acessa ou solicita dados sensíveis do usuário.
+
+
+* Não faz promessas nem garantias de resultados financeiros, limitando-se a recomendar boas práticas.
+
+
+* Não inventa estatísticas.
+
+
+* Evita nomes de instituições reais e pessoas famosas.
+
+
+
+**Redirecionamento:**
+Quando não sabe a resposta ou quando o assunto foge do escopo financeiro, a IA é instruída a admitir o desconhecimento usando o padrão: *"Isso aí eu não sei te dizer agora, mas amiga aqui pode te ajudar com:..."*, listando em seguida suas reais capacidades.
+
+---
+
+## 📈 Avaliação e Resultados
+
+A AmícIA foi submetida a cenários de teste reais focados em **Assertividade**, **Segurança** e **Coerência**. Durante as validações, registramos os seguintes aprendizados e resultados:
+
+* **Oportunidade de Melhoria na Segurança:** O teste de perguntas fora do escopo (ex: "Que modelo de tênis você recomenda para correr?") teve um resultado incorreto. O agente tentou ensinar o usuário a escolher o tênis, ignorando a diretriz de não responder sobre outros assuntos. Isso mostra que a AmícIA precisa de refinamentos para não tentar responder a perguntas que fogem do escopo financeiro.
+
+* **Desafio Técnico e Acessibilidade:** A ideia inicial de utilizar 5 fontes diferentes de dados exigiria uma IA muito pesada para processamento. Na prática, isso sobrecarregou o computador, causando superaquecimento e utilizando toda a memória RAM disponível.
+
+* **Decisão Arquitetural:** Para manter a solução acessível e capaz de rodar localmente em computadores comuns, a base de dados precisou ser sacrificada, sendo reduzida para apenas um arquivo TXT. Concluímos que um modelo online (via compra de *tokens*) seria a arquitetura ideal para suportar um conhecimento mais robusto, embora a solução deixasse de ser 100% gratuita.
+
+---
+
+## 🚀 Como Executar o Projeto
+
+**1. Configuração do Ollama:**
+Instale o Ollama e baixe o modelo leve necessário para o projeto.
+
+```bash
+# Baixar o modelo
+ollama pull llama3.2:1b
 
 ```
-📁 lab-agente-financeiro/
-│
-├── 📄 README.md
-│
-├── 📁 data/                          # Dados mockados para o agente
-│   ├── historico_atendimento.csv     # Histórico de atendimentos (CSV)
-│   ├── perfil_investidor.json        # Perfil do cliente (JSON)
-│   ├── produtos_financeiros.json     # Produtos disponíveis (JSON)
-│   └── transacoes.csv                # Histórico de transações (CSV)
-│
-├── 📁 docs/                          # Documentação do projeto
-│   ├── 01-documentacao-agente.md     # Caso de uso e arquitetura
-│   ├── 02-base-conhecimento.md       # Estratégia de dados
-│   ├── 03-prompts.md                 # Engenharia de prompts
-│   ├── 04-metricas.md                # Avaliação e métricas
-│   └── 05-pitch.md                   # Roteiro do pitch
-│
-├── 📁 src/                           # Código da aplicação
-│   └── app.py                        # (exemplo de estrutura)
-│
-├── 📁 assets/                        # Imagens e diagramas
-│   └── ...
-│
-└── 📁 examples/                      # Referências e exemplos
-    └── README.md
+
+**2. Execução da Aplicação:**
+Com o modelo baixado e as dependências instaladas, rode a aplicação utilizando o Streamlit.
+
+```bash
+python -m streamlit run src/app.py
+
 ```
 
 ---
 
-## Dicas Finais
+## 🎥 Pitch e Demonstração
 
-1. **Comece pelo prompt:** Um bom system prompt é a base de um agente eficaz
-2. **Use os dados mockados:** Eles garantem consistência e evitam problemas com dados sensíveis
-3. **Foque na segurança:** No setor financeiro, evitar alucinações é crítico
-4. **Teste cenários reais:** Simule perguntas que um cliente faria de verdade
-5. **Seja direto no pitch:** 3 minutos passam rápido, vá ao ponto
+Para conferir a proposta de valor e a solução em funcionamento prático, assista ao nosso pitch:
+
+🔗 **[AmícIA, sua Amiga Inteligente | Uma Especialista em Finanças](https://youtu.be/YTjavvynpEY)**.
