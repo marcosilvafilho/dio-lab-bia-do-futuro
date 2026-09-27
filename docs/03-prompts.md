@@ -151,4 +151,3 @@ Me dá esses detalhes que eu te ajudo a traçar o melhor caminho!
 > Registre aqui ajustes que você fez nos prompts e por quê.
 
 - Utilizei a IA Gemini na elaboração desses prompts. Ao longo do desenvolvimento, percebi que a fala inicial da AmícIA tinha uma pergunta, sobre como poderia ajudar. Entretanto, percebi que o usuário pode iniciar a conversa já trazendo o contexto, então troquei a pergunta "Como posso te ajudar a alcançar suas metas?" pela afirmação "Quero te ajudar a alcançar as suas metas!"
-- [Observação 2]
