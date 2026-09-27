@@ -17,6 +17,7 @@ Utilizei os seguintes arquivos da pasta `data`:
 ## Adaptações nos Dados
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
+
 Sim, meu objetivo era diferente do que os dados da pasta original forneciam, então trouxe as fontes listadas acima.
 
 ---
