@@ -105,7 +105,7 @@ with st.spinner("Estudando a base de conhecimento..."):
 
 if "mensagens" not in st.session_state:
     st.session_state.mensagens = [
-        {"role": "assistant", "content": "Olá! Sou AmícIA, sua amiga inteligente. Como posso te ajudar a organizar suas finanças?"}
+        {"role": "assistant", "content": "Olá! Sou AmícIA, sua amiga inteligente. Quero te ajudar a organizar suas finanças!"}
     ]
 
 for msg in st.session_state.mensagens:
